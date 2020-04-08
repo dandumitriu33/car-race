@@ -26,10 +26,17 @@ public class Truck extends Vehicle {
 
     @Override
     public void prepareForLap() {
+        int decideBreakDown = Util.randomNumberFromRange(1, 100);
+        if (decideBreakDown <= BREAK_CHANCE) {
+            breakdownTurnsLeft = 2;
+        }
         if (this.breakdownTurnsLeft>0) {
             speed=0;
             this.breakdownTurnsLeft--;
             Race.setIsThereABrokenTruck(true);
+        }
+        else {
+            speed = 100;
         }
     }
 
