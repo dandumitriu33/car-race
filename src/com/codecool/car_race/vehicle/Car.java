@@ -1,6 +1,8 @@
 package com.codecool.car_race.vehicle;
 
+import com.codecool.car_race.Race;
 import com.codecool.car_race.Util;
+import com.codecool.car_race.Weather;
 
 import java.util.Random;
 
@@ -24,11 +26,14 @@ public class Car extends Vehicle {
 
     @Override
     public void prepareForLap() {
-
+        if (Race.getIsThereABrokenTruck()) {
+            this.speed = 75;
+        }
     }
 
     @Override
     public void moveForAnHour() {
+        this.prepareForLap();
         this.setDistanceTraveled(speed);
     }
 

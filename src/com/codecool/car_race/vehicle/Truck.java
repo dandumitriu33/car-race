@@ -1,11 +1,12 @@
 package com.codecool.car_race.vehicle;
 
+import com.codecool.car_race.Race;
 import com.codecool.car_race.Util;
 
 public class Truck extends Vehicle {
     private int name;
     private int speed;
-    private int breakdownChance = 5;
+    private final int BREAK_CHANCE = 5;
     private int breakdownTurnsLeft = 0;
 
     public Truck() {
@@ -25,11 +26,16 @@ public class Truck extends Vehicle {
 
     @Override
     public void prepareForLap() {
-
+        if (this.breakdownTurnsLeft>0) {
+            speed=0;
+            this.breakdownTurnsLeft--;
+            Race.setIsThereABrokenTruck(true);
+        }
     }
 
     @Override
     public void moveForAnHour() {
+        this.prepareForLap();
         this.setDistanceTraveled(speed);
     }
 
