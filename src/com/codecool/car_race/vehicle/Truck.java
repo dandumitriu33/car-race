@@ -14,8 +14,8 @@ public class Truck extends Vehicle {
         this.speed = 100;
     }
 
-    public int getName() {
-        return this.name;
+    public String getName() {
+        return String.valueOf(this.name);
     }
 
     public int getSpeed() {
@@ -30,7 +30,7 @@ public class Truck extends Vehicle {
 
     @Override
     public void moveForAnHour() {
-
+        this.setDistanceTraveled(speed);
     }
 
 

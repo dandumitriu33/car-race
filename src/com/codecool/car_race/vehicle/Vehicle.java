@@ -7,6 +7,8 @@ public abstract class Vehicle {
         this.distanceTraveled = 0;
     }
 
+    public abstract String getName();
+
     public abstract void prepareForLap();
 
     public abstract void moveForAnHour();
@@ -16,11 +18,9 @@ public abstract class Vehicle {
         return this.distanceTraveled;
     }
 
-    public void setDistanceTraveled(){
-        this.distanceTraveled += 5;
+    public void setDistanceTraveled(int speed){
+        this.distanceTraveled += speed;
     }
-
-
 
 
 }

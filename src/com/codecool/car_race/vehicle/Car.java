@@ -29,7 +29,7 @@ public class Car extends Vehicle {
 
     @Override
     public void moveForAnHour() {
-
+        this.setDistanceTraveled(speed);
     }
 
     private String randomizeCarName() {

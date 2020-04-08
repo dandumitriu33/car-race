@@ -35,30 +35,9 @@ public class Main {
     public static void main(String[] args) {
         Race race = new Race();
         createVehicles(race);
-//
-//        race.simulateRace();
-//        race.printRaceResults();
 
+        race.simulateRace(50);
+        race.printRaceResults();
 
-        Car brrr = new Car();
-        System.out.println("name: " + brrr.getName());
-        System.out.println("distance traveled: " + brrr.getDistanceTraveled());
-        brrr.setDistanceTraveled();
-        System.out.println("distance traveled: " + brrr.getDistanceTraveled());
-        System.out.println("speed: " + brrr.getSpeed());
-
-        Truck jimmy = new Truck();
-        System.out.println("Truck name: " + jimmy.getName());
-        System.out.println("Truck speed: " + jimmy.getSpeed());
-
-        Motorcycle greg = new Motorcycle();
-        Motorcycle joe = new Motorcycle();
-        System.out.println("Motorcycle name: " + joe.getName());
-        System.out.println("Motorcycle speed: " + joe.getSpeed());
-
-        ArrayList<Vehicle> all = race.getRacers();
-        for (int i=0; i<all.size(); i++) {
-            System.out.println(all.get(i).getClass());
-        }
     }
 }
