@@ -1,6 +1,5 @@
 package com.codecool.car_race;
 
-
 import com.codecool.car_race.vehicle.Car;
 import com.codecool.car_race.vehicle.Motorcycle;
 import com.codecool.car_race.vehicle.Truck;

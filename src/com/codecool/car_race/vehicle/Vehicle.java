@@ -13,7 +13,6 @@ public abstract class Vehicle {
 
     public abstract void moveForAnHour();
 
-
     public int getDistanceTraveled() {
         return this.distanceTraveled;
     }

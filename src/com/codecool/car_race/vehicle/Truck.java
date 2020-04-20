@@ -23,7 +23,6 @@ public class Truck extends Vehicle {
         return this.speed;
     }
 
-
     @Override
     public void prepareForLap() {
         int decideBreakDown = Util.randomNumberFromRange(1, 100);
