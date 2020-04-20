@@ -1,12 +1,11 @@
 package com.codecool.car_race.vehicle;
-
 import com.codecool.car_race.Race;
 import com.codecool.car_race.Util;
 import com.codecool.car_race.Weather;
 
 import java.util.Random;
 
-public class Car extends Vehicle {
+public class Car extends Vehicle implements CarInterface{
     private String name;
     private int speed;
 
@@ -18,6 +17,11 @@ public class Car extends Vehicle {
 
     public String getName() {
         return this.name;
+    }
+
+    @Override
+    public String getTypeOfVehicle() {
+        return typeOfVehicle;
     }
 
     public int getSpeed() {

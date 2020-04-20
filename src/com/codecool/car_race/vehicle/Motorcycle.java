@@ -3,7 +3,7 @@ package com.codecool.car_race.vehicle;
 import com.codecool.car_race.Util;
 import com.codecool.car_race.Weather;
 
-public class Motorcycle extends Vehicle{
+public class Motorcycle extends Vehicle implements MotorcycleInterface{
     private int name;
     private int speed;
     private boolean speedAdjusted = false;
@@ -21,6 +21,11 @@ public class Motorcycle extends Vehicle{
 
     public String getName() {
         return String.valueOf(this.name);
+    }
+
+    @Override
+    public String getTypeOfVehicle() {
+        return typeOfVehicle;
     }
 
     public int getSpeed() {

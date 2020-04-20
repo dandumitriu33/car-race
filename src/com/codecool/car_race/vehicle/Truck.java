@@ -3,7 +3,7 @@ package com.codecool.car_race.vehicle;
 import com.codecool.car_race.Race;
 import com.codecool.car_race.Util;
 
-public class Truck extends Vehicle {
+public class Truck extends Vehicle implements TruckInterface{
     private int name;
     private int speed;
     private final int BREAK_CHANCE = 5;
@@ -17,6 +17,11 @@ public class Truck extends Vehicle {
 
     public String getName() {
         return String.valueOf(this.name);
+    }
+
+    @Override
+    public String getTypeOfVehicle() {
+        return typeOfVehicle;
     }
 
     public int getSpeed() {
