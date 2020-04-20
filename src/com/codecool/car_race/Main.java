@@ -1,8 +1,6 @@
 package com.codecool.car_race;
 
-import com.codecool.car_race.vehicle.Car;
-import com.codecool.car_race.vehicle.Motorcycle;
-import com.codecool.car_race.vehicle.Truck;
+import com.codecool.car_race.vehicle.*;
 
 public class Main {
 
@@ -10,14 +8,19 @@ public class Main {
      * Creates all the vehicles that will be part of this race.
      */
     private static void createVehicles(Race race) {
-        for (int i=0; i<10; i++) {
-            Car tempCar = new Car();
-            race.addRacer(tempCar);
-            Truck tempTruck = new Truck();
-            race.addRacer(tempTruck);
-            Motorcycle tempMotorcycle = new Motorcycle();
-            race.addRacer(tempMotorcycle);
-        }
+        VehicleBuilder builder = new VehicleBuilder();
+        VehicleFactory vehicleFactory = new TruckFactory();
+        race.addRacer(builder.buildVehicle(vehicleFactory));
+
+
+//        for (int i=0; i<10; i++) {
+//            Car tempCar = new Car();
+//            race.addRacer(tempCar);
+//            Truck tempTruck = new Truck();
+//            race.addRacer(tempTruck);
+//            Motorcycle tempMotorcycle = new Motorcycle();
+//            race.addRacer(tempMotorcycle);
+//        }
     }
 
     /**

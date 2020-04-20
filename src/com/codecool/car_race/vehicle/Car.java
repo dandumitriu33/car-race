@@ -1,13 +1,14 @@
 package com.codecool.car_race.vehicle;
 import com.codecool.car_race.Race;
 import com.codecool.car_race.Util;
-import com.codecool.car_race.Weather;
 
-import java.util.Random;
+// Concrete Product Car
 
-public class Car extends Vehicle implements CarInterface{
+public class Car implements VehicleInterface{
     private String name;
     private int speed;
+    String typeOfVehicle = "Car";
+
 
     public Car(){
         super();
@@ -39,6 +40,10 @@ public class Car extends Vehicle implements CarInterface{
     public void moveForAnHour() {
         this.prepareForLap();
         this.setDistanceTraveled(speed);
+    }
+
+    @Override
+    public void setDistanceTraveled(int speed) {
     }
 
     private String randomizeCarName() {

@@ -1,13 +1,16 @@
 package com.codecool.car_race.vehicle;
-
 import com.codecool.car_race.Util;
 import com.codecool.car_race.Weather;
 
-public class Motorcycle extends Vehicle implements MotorcycleInterface{
+// Concrete Product Motorcycle
+
+public class Motorcycle implements VehicleInterface{
     private int name;
     private int speed;
     private boolean speedAdjusted = false;
     private static int numberOfMotorcycles = 0;
+    private String typeOfVehicle;
+    private int distanceTraveled;
 
     {
         numberOfMotorcycles += 1;
@@ -17,6 +20,8 @@ public class Motorcycle extends Vehicle implements MotorcycleInterface{
         super();
         this.name = numberOfMotorcycles;
         this.speed = 100;
+        this.typeOfVehicle = "Motorcycle";
+        this.distanceTraveled = 0;
     }
 
     public String getName() {
@@ -45,6 +50,11 @@ public class Motorcycle extends Vehicle implements MotorcycleInterface{
     public void moveForAnHour() {
         this.prepareForLap();
         this.setDistanceTraveled(this.speed);
+    }
+
+    @Override
+    public void setDistanceTraveled(int speed) {
+        distanceTraveled += speed;
     }
 
 
