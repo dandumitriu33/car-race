@@ -37,7 +37,7 @@ public class Race {
     public void printRaceResults() {
         ArrayList<Vehicle> all = this.racers;
         for (int i=0; i<all.size(); i++) {
-            System.out.println(all.get(i).getClass() + " " + all.get(i).getName() + " " + all.get(i).getDistanceTraveled());
+            System.out.println(all.get(i).getTypeOfVehicle() + " " + all.get(i).getName() + " " + all.get(i).getDistanceTraveled());
         }
     }
 

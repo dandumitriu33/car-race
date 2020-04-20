@@ -4,7 +4,7 @@ import com.codecool.car_race.Weather;
 
 // Concrete Product Motorcycle
 
-public class Motorcycle implements VehicleInterface{
+public class Motorcycle extends Vehicle{
     private int name;
     private int speed;
     private boolean speedAdjusted = false;
@@ -55,6 +55,10 @@ public class Motorcycle implements VehicleInterface{
     @Override
     public void setDistanceTraveled(int speed) {
         distanceTraveled += speed;
+    }
+
+    public int getDistanceTraveled() {
+        return distanceTraveled;
     }
 
 

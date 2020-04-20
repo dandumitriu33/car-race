@@ -4,7 +4,7 @@ import com.codecool.car_race.Util;
 
 // Concrete Product Truck
 
-public class Truck implements VehicleInterface{
+public class Truck extends Vehicle{
     private int name;
     private int speed;
     private final int BREAK_CHANCE = 5;
@@ -60,5 +60,8 @@ public class Truck implements VehicleInterface{
         distanceTraveled += speed;
     }
 
+    public int getDistanceTraveled() {
+        return distanceTraveled;
+    }
 
 }

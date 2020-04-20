@@ -8,19 +8,14 @@ public class Main {
      * Creates all the vehicles that will be part of this race.
      */
     private static void createVehicles(Race race) {
-        VehicleBuilder builder = new VehicleBuilder();
-        VehicleFactory vehicleFactory = new TruckFactory();
-        race.addRacer(builder.buildVehicle(vehicleFactory));
-
-
-//        for (int i=0; i<10; i++) {
-//            Car tempCar = new Car();
-//            race.addRacer(tempCar);
-//            Truck tempTruck = new Truck();
-//            race.addRacer(tempTruck);
-//            Motorcycle tempMotorcycle = new Motorcycle();
-//            race.addRacer(tempMotorcycle);
-//        }
+        for (int i=0; i<10; i++) {
+            Car tempCar = new Car();
+            race.addRacer(tempCar);
+            Truck tempTruck = new Truck();
+            race.addRacer(tempTruck);
+            Motorcycle tempMotorcycle = new Motorcycle();
+            race.addRacer(tempMotorcycle);
+        }
     }
 
     /**

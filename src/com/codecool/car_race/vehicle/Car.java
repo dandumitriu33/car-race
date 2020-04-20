@@ -4,16 +4,19 @@ import com.codecool.car_race.Util;
 
 // Concrete Product Car
 
-public class Car implements VehicleInterface{
+public class Car extends Vehicle{
     private String name;
     private int speed;
-    String typeOfVehicle = "Car";
+    String typeOfVehicle;
+    int distanceTraveled;
 
 
     public Car(){
         super();
         this.name = randomizeCarName();
         this.speed = Util.randomNumberFromRange(80, 110);
+        this.typeOfVehicle = "Car";
+        this.distanceTraveled = 0;
     }
 
     public String getName() {
@@ -44,6 +47,11 @@ public class Car implements VehicleInterface{
 
     @Override
     public void setDistanceTraveled(int speed) {
+        distanceTraveled += speed;
+    }
+
+    public int getDistanceTraveled() {
+        return this.distanceTraveled;
     }
 
     private String randomizeCarName() {

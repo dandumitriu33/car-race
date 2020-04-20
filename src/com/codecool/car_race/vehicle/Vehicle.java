@@ -1,6 +1,6 @@
 package com.codecool.car_race.vehicle;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements VehicleInterface {
     private int distanceTraveled;
 
     public Vehicle() {
