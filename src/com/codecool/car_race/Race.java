@@ -4,6 +4,8 @@ import com.codecool.car_race.vehicle.Vehicle;
 
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class Race {
     private static boolean isThereABrokenTruck;
@@ -31,11 +33,13 @@ public class Race {
                 racers.get(j).moveForAnHour();
             }
         }
-
     }
+
+
 
     public void printRaceResults() {
         ArrayList<Vehicle> all = this.racers;
+        all.sort(Comparator.comparing(Vehicle::getDistanceTraveled));
         for (int i=0; i<all.size(); i++) {
             System.out.println(all.get(i).getTypeOfVehicle() + " " + all.get(i).getName() + " " + all.get(i).getDistanceTraveled());
         }
