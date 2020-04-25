@@ -4,7 +4,7 @@ import com.codecool.car_race.Util;
 
 // Concrete Product Car
 
-public class Car extends Vehicle{
+public class Car implements Vehicle {
     private String name;
     private int speed;
     String typeOfVehicle;

@@ -4,7 +4,7 @@ import com.codecool.car_race.Util;
 
 // Concrete Product Truck
 
-public class Truck extends Vehicle{
+public class Truck implements Vehicle {
     private int name;
     private int speed;
     private final int BREAK_CHANCE = 5;

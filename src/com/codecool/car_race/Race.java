@@ -1,10 +1,9 @@
 package com.codecool.car_race;
+
+
 import com.codecool.car_race.vehicle.Vehicle;
 
-
-
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
 public class Race {

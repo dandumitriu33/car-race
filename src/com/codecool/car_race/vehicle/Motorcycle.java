@@ -4,7 +4,7 @@ import com.codecool.car_race.Weather;
 
 // Concrete Product Motorcycle
 
-public class Motorcycle extends Vehicle{
+public class Motorcycle implements Vehicle {
     private int name;
     private int speed;
     private boolean speedAdjusted = false;

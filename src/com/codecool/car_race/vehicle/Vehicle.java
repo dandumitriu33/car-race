@@ -1,25 +1,16 @@
 package com.codecool.car_race.vehicle;
 
-public abstract class Vehicle implements VehicleInterface {
-    private int distanceTraveled;
+public interface Vehicle {
 
-    public Vehicle() {
-        this.distanceTraveled = 0;
-    }
+    public void prepareForLap();
 
-    public abstract String getName();
+    public void moveForAnHour();
 
-    public abstract void prepareForLap();
+    public void setDistanceTraveled(int speed);
 
-    public abstract void moveForAnHour();
+    public String getTypeOfVehicle();
 
-    public int getDistanceTraveled() {
-        return this.distanceTraveled;
-    }
+    public String getName();
 
-    public void setDistanceTraveled(int speed){
-        this.distanceTraveled += speed;
-    }
-
-
+    public int getDistanceTraveled();
 }
